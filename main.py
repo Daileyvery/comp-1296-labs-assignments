@@ -3,6 +3,7 @@
 
 from test_texts import TEST_TEXT_1, TEST_TEXT_2, TEST_TEXT_3
 
+
 def analyze(text):
     text_count = 0
     space_counter = 0
