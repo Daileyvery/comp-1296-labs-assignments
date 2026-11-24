@@ -80,7 +80,10 @@ def space_count_statistics(text):
         space_percentage = 0
     return space_percentage
 
-def unique_words(highest_word, highest_count):
+def unique_words(frequency_reader):
+    return len(frequency_reader)
+
+def common_word(highest_word, highest_count):
     if highest_word is None:
         highest_count_variable = "You have not inputted a word that repeats."
     elif highest_count == 1:
@@ -100,7 +103,7 @@ def analyze(text):
     word_count = total_word_counter(frequency_reader)
     space_percentage = space_count_statistics(text)
     highest_word, highest_count = common_word_counter(frequency_reader)
-    highest_count_variable = unique_words(highest_word, highest_count)
+    highest_count_variable = common_word(highest_word, highest_count)
 
     statistics_print = { # REVISED: // This is the dictionary for the statistics
         "Character count": text_count,
