@@ -78,7 +78,10 @@ def menu_selection():
                 break
         return text
 
-text = menu_selection()
+def main():
+    text = menu_selection()
+    if text:
+        analyze(text)
 
-if text:
-    analyze(text)
+if __name__ == "__main__":
+    main()
